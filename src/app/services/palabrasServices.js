@@ -19,7 +19,14 @@ export const palabrasApi = createApi({
                 body: palabra
             })
         }),
+        postNuevaPalabra: builder.mutation({
+            query: ({id, palabra}) => ({
+                url: `palabras/${id}.json`,
+                method: "PUT",
+                body: palabra
+            })
+        }),
     })
 })
 
-export const { useGetPalabrasQuery, useGetNumerosQuery, usePostPalabrasMutation } = palabrasApi
+export const { useGetPalabrasQuery, useGetNumerosQuery, usePostPalabrasMutation, usePostNuevaPalabraMutation } = palabrasApi

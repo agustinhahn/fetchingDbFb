@@ -1,6 +1,6 @@
 import { View, Text, StatusBar } from 'react-native'
 import { Provider } from 'react-redux'
-import TabNavigator from './src/navigation/TabNavigator'
+import TabNavigator from './src/navigation/Tabnavigator'
 import {store} from './src/app/store'
 
 const App = () => {

@@ -2,10 +2,10 @@ import { View, Text, StyleSheet } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../screens/Home';
-import LetrasStack from './LetrasStack';
 import TabIcon from '../components/TabIcon';
 import PalabraNueva from "../components/PalabraNueva"
 import Welcome from '../screens/Welcome';
+import Letras from '../screens/Letras';
 
 const Tab = createBottomTabNavigator();
 
@@ -34,14 +34,14 @@ const TabNavigator = () => {
                     }}
                 />
                 <Tab.Screen
-                    name='PalabrasTab'
-                    component={LetrasStack}
+                    name='Letras'
+                    component={Letras}
                     options={{
                         tabBarIcon: ({ focused }) => <TabIcon icon="clipboard" label="palabrasBase" focused={focused} />
                     }}
                 />
                 <Tab.Screen
-                    name='nuevaPalabra'
+                    name='PalabraNew'
                     component={PalabraNueva}
                     options={{
                         tabBarIcon: ({ focused }) => <TabIcon icon="clipboard" label="nueva palabra" focused={focused} />
