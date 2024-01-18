@@ -7,7 +7,7 @@ const PalabraNueva = ({route}) => {
     if(id){
         console.log(id)
     }
-    const palabraNuevaSubir = "holasoylanueva"
+    const palabraprueba = "prueba"
     const {data: palabras,refetch} = useGetPalabrasQuery()
     const [triggerPostPalabra] = usePostPalabrasMutation()
     const [updatePalabra, error] = usePostNuevaPalabraMutation()
@@ -23,7 +23,7 @@ const PalabraNueva = ({route}) => {
     }
 
     const modificarPalabra = () =>{
-        updatePalabra({id,palabraNuevaSubir })
+        updatePalabra({id,palabra:palabraprueba })
         refetch()
     }
 

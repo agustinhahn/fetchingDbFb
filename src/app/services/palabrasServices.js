@@ -23,7 +23,10 @@ export const palabrasApi = createApi({
             query: ({id, palabra}) => ({
                 url: `palabras/${id}.json`,
                 method: "PUT",
-                body: palabra
+                body: {
+                    id: id,
+                    palabra: palabra
+                    }
             })
         }),
     })
